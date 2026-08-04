@@ -1,5 +1,12 @@
-# devrev-jp-novasoft/orderhub-hokuriku
+# OrderHub — 北陸商事 customizations (Japan demo)
 
-NovaSoft OrderHub demo repository for DevRev Japan sales.
+UC1 / UC23 向けカスタム差分の置き場。
 
-Do not use real customer names or production credentials.
+## Custom rules
+
+- 季節限定ロットの別倉庫振替
+- 請求書レイアウト: 部署コード列
+
+## PR 規約
+
+`../PR_TEMPLATE.md` を参照。`work-item:ISS-xx` を含める。
