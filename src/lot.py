@@ -30,8 +30,15 @@ def transfer_seasonal_lot(sku: str, qty: int) -> dict:
     }
 
 
-def round_lot_qty(qty: float) -> int:
-    """ロット数量の切上げ（設定変更候補。標準丸めマスタと突合）."""
+def round_lot_qty(qty: float, *, mode: str = "ceil") -> int:
+    """ロット数量の丸め（設定変更候補。標準丸めマスタと突合）.
+
+    mode: ceil（既定・北陸）| floor | round_half_up
+    """
     import math
 
+    if mode == "floor":
+        return int(math.floor(qty))
+    if mode == "round_half_up":
+        return int(math.floor(qty + 0.5))
     return int(math.ceil(qty))
