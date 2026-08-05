@@ -9,13 +9,17 @@ from typing import Any
 
 
 STANDARD_COLUMNS = ("invoice_no", "buyer_name", "tax_id", "amount", "tax")
+# 適格請求書の備考列（制度改正デモ: 記載項目追加フック）
+OPTIONAL_COLUMNS = ("remarks",)
 
 
-def invoice_columns(*, include_dept_code: bool = True) -> tuple[str, ...]:
+def invoice_columns(*, include_dept_code: bool = True, include_remarks: bool = False) -> tuple[str, ...]:
     """請求書列。北陸は部署コード列を追加（標準外カスタム）."""
     cols = list(STANDARD_COLUMNS)
     if include_dept_code:
         cols.append("dept_code")
+    if include_remarks:
+        cols.extend(OPTIONAL_COLUMNS)
     return tuple(cols)
 
 
