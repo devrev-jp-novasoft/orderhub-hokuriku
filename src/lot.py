@@ -50,3 +50,5 @@ def round_lot_qty(qty: float, *, mode: str = "ceil") -> int:
 # WEBHOOK_VERIFY 20260805T065058Z
 
 # URL_CONFIRM 20260805T081639Z
+
+# RBAC_WEBHOOK 20260805T082254Z
