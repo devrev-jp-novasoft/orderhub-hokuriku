@@ -29,3 +29,5 @@ def render_invoice_row(payload: dict[str, Any]) -> dict[str, Any]:
     # インボイス必須項目の簡易チェック（制度改正デモ用フック）
     row["invoice_ready"] = bool(row.get("tax_id") and row.get("amount") != "")
     return row
+
+# ISS-17 invoice layout 20260805T090819Z
