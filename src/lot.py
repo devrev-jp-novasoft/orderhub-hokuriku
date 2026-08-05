@@ -48,3 +48,5 @@ def round_lot_qty(qty: float, *, mode: str = "ceil") -> int:
 # POST_REINSTALL_MERGE 20260805T064045Z
 
 # WEBHOOK_VERIFY 20260805T065058Z
+
+# URL_CONFIRM 20260805T081639Z
